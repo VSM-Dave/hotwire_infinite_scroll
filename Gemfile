@@ -14,7 +14,7 @@ gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
@@ -53,6 +53,7 @@ gem 'devise-bootstrapped', github: 'excid3/devise-bootstrapped', branch: 'bootst
 gem 'devise_masquerade', '~> 1.2'
 gem 'font-awesome-sass', '~> 5.13'
 gem 'friendly_id', '~> 5.3'
+gem "hotwire-rails"
 gem 'image_processing'
 gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 gem 'name_of_person', '~> 1.1'
