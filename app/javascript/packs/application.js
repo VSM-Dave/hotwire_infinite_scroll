@@ -7,7 +7,9 @@ import "@hotwired/turbo-rails"
 require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
-require("local-time").start()
+import LocalTime from "local-time"
+LocalTime.start()
+
 
 window.Rails = Rails
 

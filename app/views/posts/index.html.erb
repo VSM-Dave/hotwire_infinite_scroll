@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-sm-6">
+    <h1>Posts</h1>
+  </div>
+
+  <turbo-frame id="new_post" class="col-sm-6 text-right">
+    <%= link_to new_post_path, class: 'btn btn-primary' do %>
+      Add New Post
+    <% end %>
+  </turbo-frame>
+
+</div>
+
+<%= turbo_stream_from(current_user, :timeline) %>
+<%= turbo_frame_tag("timeline_page_#{@pagy.page}") do %>
+  <%= render @posts %>
+<% end %>
+
+<% (@pagy.next..@pagy.to).each do |page| %>
+  <%= turbo_frame_tag("timeline_page_#{page}", src:  pagy_url_for(page, @pagy) , loading: :lazy) do %>
+    <%== pagy_nav(@pagy) %>
+  <% end %>
+<% end %>
+
+
+
+
+
